@@ -2,17 +2,17 @@
 
 A personal repository documenting my journey through fundamental data structures, algorithms, and complexity analysis using C++.
 
-The goal of this repository is to understand how these concepts work internally by implementing them from scratch.
+The goal is to understand how each concept works internally by implementing it from scratch.
 
 ## Topics
 
 ### Complexity Analysis
 
 - [x] Big O Notation
-  - [x] O(1)
-  - [x] O(n)
-  - [x] O(n²)
-  - [x] Drop Constants
+- [x] O(1)
+- [x] O(n)
+- [x] O(n²)
+- [x] Drop Constants
 
 ### Data Structures
 
@@ -32,32 +32,12 @@ The goal of this repository is to understand how these concepts work internally 
 - [ ] Recursion
 - [ ] Dynamic Programming
 
-### Problem-Solving Patterns
-
-- [ ] Two Pointers
-- [ ] Sliding Window
-- [ ] Binary Search
-- [ ] Fast & Slow Pointers
-- [ ] Monotonic Stack
-
-## Approach
-
-Each topic focuses on:
-
-- Understanding the core concept
-- Visualizing how it works
-- Implementing it from scratch
-- Analyzing time and space complexity
-- Identifying common use cases
-
 ## Repository Structure
 
 ```text
 .
-├── Complexity-Analysis/
+├── BigO/
 ├── data-structures/
-│   ├── LinkedList/
-│   ├── DoublyLinkedList/
-│   └── Stacks/
+├── algorithms/
 ├── LICENSE
 └── README.md
