@@ -17,7 +17,7 @@ The goal of this repository is to understand how these concepts work internally 
 ### Data Structures
 
 - [x] Singly Linked List
-- [ ] Doubly Linked List
+- [x] Doubly Linked List
 - [ ] Stack
 - [ ] Queue
 - [ ] Hash Table
