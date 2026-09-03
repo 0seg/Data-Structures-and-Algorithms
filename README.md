@@ -18,8 +18,8 @@ The goal is to understand how each concept works internally by implementing it f
 
 - [x] Singly Linked List
 - [x] Doubly Linked List
-- [ ] Stack
-- [ ] Queue
+- [x] Stack
+- [x] Queue
 - [ ] Hash Table
 - [ ] Tree
 - [ ] Heap
