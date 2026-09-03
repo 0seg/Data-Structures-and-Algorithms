@@ -61,4 +61,17 @@ class Queue {
         length--; // Decrease the length of the queue
         return dequeuedValue; // Return the value of the dequeued node
     }
+    int front() {
+        // Return the value of the first node without removing it
+        if (length == 0) return INT_MIN; // Return INT_MIN value for empty queue
+        return first->value;
+    }
+
+    bool empty() {
+        // Check if the queue is empty
+        return length == 0;
+    }
+
+    int 
+
 }
