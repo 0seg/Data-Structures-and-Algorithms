@@ -63,4 +63,12 @@ class Stack{
         // Check if the stack is empty
         return length == 0;
     }
+
+    int top(){
+        // Check if the stack is empty
+        if (length == 0) return INT_MIN; // Return INT_MIN to indicate that the stack is empty
+
+        // Return the value of the top node
+        return top->value;
+    }
 }
