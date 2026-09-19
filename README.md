@@ -16,6 +16,7 @@ The goal is to understand how each concept works internally by implementing it f
 
 ### Data Structures
 
+- [x] Arrays
 - [x] Singly Linked List
 - [x] Doubly Linked List
 - [x] Stack
