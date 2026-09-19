@@ -21,7 +21,7 @@ The goal is to understand how each concept works internally by implementing it f
 - [x] Doubly Linked List
 - [x] Stack
 - [x] Queue
-- [ ] Hash Table
+- [x] Hash Table
 - [ ] Tree
 - [ ] Heap
 - [ ] Graph

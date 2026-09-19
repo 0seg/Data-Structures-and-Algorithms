@@ -3,20 +3,22 @@
  */
 
 #include <iostream>
+#include <string>
+#include <vector>
 
 
 class Node{
     public:
-        string key;
+        std::string key;
         int value;
         Node* next;
     
-        Node(string key, int value){
+        Node(std::string key, int value){
             this->key = key;
             this->value = value;
             next = nullptr;
         }
-}
+};
 
 
 class HashTable {
@@ -24,7 +26,8 @@ class HashTable {
         static const int SIZE = 7;
         Node* table[SIZE];
 
-    int hash(string key){
+    public:
+        int hash(std::string key){
         int hashValue = 0;
             for(int i = 0; i < key.length(); i++){
                 int asciiValue = (int)key[i];
@@ -32,7 +35,7 @@ class HashTable {
             }
             return hashValue;
         }
-    void set(string key, int value){
+    void set(std::string key, int value){
         int index = hash(key);
         Node* newNode = new Node(key, value);
 
@@ -46,7 +49,8 @@ class HashTable {
             temp->next = newNode;
         }
     }
-    int get(string key){
+    public:
+        int get(std::string key){
         int index = hash(key);
         Node* temp = table[index];
 
@@ -58,9 +62,9 @@ class HashTable {
         }
         return -1; // Key not found
     }
-
-    vector<string> keys(){
-        vector<string> keysList;
+    public:
+    std::vector<std::string> keys(){
+        std::vector<std::string> keysList;
         for(int i = 0; i < SIZE; i++){
             Node* temp = table[i];
             while(temp != nullptr){
@@ -70,5 +74,4 @@ class HashTable {
         }
         return keysList;
     }
-    
-}
+};
