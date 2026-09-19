@@ -37,7 +37,7 @@ The goal is to understand how each concept works internally by implementing it f
 
 ```text
 .
-├── BigO/
+├── Complexity-Analysis/
 ├── data-structures/
 ├── algorithms/
 ├── LICENSE
