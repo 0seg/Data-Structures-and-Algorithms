@@ -122,6 +122,48 @@ class Array{
             return -1;
         }
 
+        T max(){
+            if (size == 0){
+                throw std::out_of_range("Cannot get maximum of an empty array");
+            }
+
+            T m = data[0];
+
+            for(size_t i{1}; i<size; ++i){
+                if(data[i] > m){
+                    m = data[i];
+                }
+            }
+            return m;
+        }
+
+        T min(){
+            if (size == 0 ){
+                throw std::out_of_range("Cannot get minimum of an empty array");
+            }
+
+            T m = data[0];
+
+            for(size_t i{1}; i<size; ++i){
+                if(data[i] < m){
+                    m = data[i];
+                }
+            }
+            return m;
+        }
+
+        T sum(){
+            if(size == 0){
+                throw std::out_of_range("Cannot get sum of an empty array");
+            }
+            
+            T s{};
+
+            for(size_t i{}; i<size; ++i){
+                s += data[i];
+            }
+            return s;
+        }
 
 };
 
@@ -216,6 +258,29 @@ int main() {
     catch (const std::out_of_range& e) {
         std::cout << "Exception: " << e.what() << '\n';
     }
+    
+    // 8. Max
+    std::cout << "\n=== MAX ===\n";
+
+    Array<int> numbers{0, 5};
+    numbers.append(10);
+    numbers.append(50);
+    numbers.append(20);
+    numbers.append(30);
+
+    std::cout << "Max -> " << numbers.max() << '\n';
+
+
+    // 9. Min
+    std::cout << "\n=== MIN ===\n";
+
+    std::cout << "Min -> " << numbers.min() << '\n';
+
+
+    // 10. Sum
+    std::cout << "\n=== SUM ===\n";
+
+    std::cout << "Sum -> " << numbers.sum() << '\n';
 
     return 0;
 }
