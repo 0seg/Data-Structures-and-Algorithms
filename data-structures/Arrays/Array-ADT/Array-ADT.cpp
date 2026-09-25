@@ -165,6 +165,14 @@ class Array{
             return s;
         }
 
+    void reverse(){
+        for(size_t i{}; i<size/2; ++i){
+            T temp = data[i];
+            data[i] = data[size - 1 - i];
+            data[size - 1 - i] = temp;
+        }
+    }
+
 };
 
 
@@ -281,6 +289,21 @@ int main() {
     std::cout << "\n=== SUM ===\n";
 
     std::cout << "Sum -> " << numbers.sum() << '\n';
+
+    // 11. Reverse
+    std::cout << "\n=== REVERSE ===\n";
+
+    std::cout << "Before reverse: ";
+    for (unsigned int i{}; i < 4; ++i) {
+        std::cout << numbers.getPosition(i) << ' ';
+    }
+
+    numbers.reverse();
+
+    std::cout << "\nAfter reverse: ";
+    for (unsigned int i{}; i < 4; ++i) {
+        std::cout << numbers.getPosition(i) << ' ';
+    }   
 
     return 0;
 }
