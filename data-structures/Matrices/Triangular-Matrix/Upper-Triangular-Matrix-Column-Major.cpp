@@ -1,46 +1,58 @@
-/* Upper Triangular Matrix - Column Major Order */
+/*
+ * Upper Triangular Matrix - Column Major Order
+ */
 
 #include <iostream>
 
-class UpperTriangularMatrix{
-    private:
-        int n;
-        int* data;
+class UpperTriangularMatrix {
 
-    public:
-        UpperTriangularMatrix(int n) : n{n} {
-            data = new int[n*(n+1)/2];
-        
+private:
+
+    int n;
+    int* data;
+
+public:
+
+    UpperTriangularMatrix(int n) : n{n} {
+        data = new int[n * (n + 1) / 2]{};
+    }
+
+    ~UpperTriangularMatrix() {
+        delete[] data;
+    }
+
+    void set(unsigned int i, unsigned int j, int x) {
+
+        if (i <= j) {
+            data[j * (j + 1) / 2 + i] = x;
         }
-        ~UpperTriangularMatrix() {
-            delete[] data;
-        }
-        
-        void set(unsigned int i, unsigned int j, int x){
-            if(i <= j){
-                data[i*(2*n-i+1)/2 + (j-i)] = x;
-            }
+    }
+
+    int get(unsigned int i, unsigned int j) {
+
+        if (i <= j) {
+            return data[j * (j + 1) / 2 + i];
         }
 
-        int get(unsigned int i, unsigned int j){
-            if(i <= j){
-                return data[i*(2*n-i+1)/2 + (j-i)];
-            }else{
-                return 0;
-            }
-        }
+        return 0;
+    }
 
-        void display(){
-            for(size_t i{0}; i < n; ++i){
-                for(size_t j{0}; j < n; ++j){
-                    if(i <= j){
-                        std::cout << data[i*(2*n-i+1)/2 + (j-i)] << ' ';
-                    }else{
-                        std::cout << '0' << ' ';
-                    }
+    void display() {
+
+        for (size_t i{0}; i < n; ++i) {
+
+            for (size_t j{0}; j < n; ++j) {
+
+                if (i <= j) {
+                    std::cout
+                        << data[j * (j + 1) / 2 + i]
+                        << ' ';
+                } else {
+                    std::cout << '0' << ' ';
                 }
-                std::cout << "\n";
             }
-        }
 
+            std::cout << '\n';
+        }
+    }
 };
