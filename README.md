@@ -34,6 +34,12 @@ The goal is to understand how each concept works internally by implementing it f
 - [ ] Recursion
 - [ ] Dynamic Programming
 
+# Algorithms/patterns
+
+- [x] Sliding Window
+
+
+
 ## Repository Structure
 
 ```text
@@ -41,5 +47,6 @@ The goal is to understand how each concept works internally by implementing it f
 ├── Complexity-Analysis/
 ├── data-structures/
 ├── algorithms/
+├── algorithms/patterns/
 ├── LICENSE
 └── README.md
