@@ -34,7 +34,7 @@ The goal is to understand how each concept works internally by implementing it f
 - [ ] Recursion
 - [ ] Dynamic Programming
 
-# Algorithms/patterns
+### Algorithms/patterns
 
 - [x] Sliding Window
 
